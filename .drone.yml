@@ -8,10 +8,9 @@ platform:
 
 steps:
   - name: test
+    image: maven:3-jdk-10
     commands:
-      - echo start build images...
-      - echo wo anzhuangle git
-      - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+    - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
       #- bash ./build.sh
     when:
       branch:
