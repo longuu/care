@@ -7,11 +7,10 @@ platform:
   arch: amd64
 
 steps:
-  - name: test
-    image: maven:3-jdk-10
+  - name: greeting
     commands:
-    - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-      #- bash ./build.sh
+    - echo hello world
+    - java -version
     when:
       branch:
         - main
