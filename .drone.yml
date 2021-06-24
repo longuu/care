@@ -11,6 +11,8 @@ steps:
     commands:
       - echo start build images...
       - echo wo anzhuangle git
+      - mvn clean package -DskipTests
+      - mv ./target/care-1.0.jar /devop/
 #      - export MAJOR_VERSION=1.0.rtm.
 #      - export BUILD_NUMBER=$DRONE_BUILD_NUMBER
 #      - export WORKSPACE=`pwd`
