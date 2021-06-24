@@ -10,6 +10,7 @@ steps:
   - name: print a shit
     commands:
       - echo start build images...
+      - echo wo anzhuangle git
 #      - export MAJOR_VERSION=1.0.rtm.
 #      - export BUILD_NUMBER=$DRONE_BUILD_NUMBER
 #      - export WORKSPACE=`pwd`
