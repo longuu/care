@@ -10,7 +10,7 @@ steps:
   - name: greeting
     commands:
     - echo hello world
-    - echo DRONE_LOG_FILE
+    - bash ./build.sh
     when:
       branch:
         - main
