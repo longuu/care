@@ -7,11 +7,13 @@ platform:
   arch: amd64
 
 steps:
-  - name: print a shit
+  - name: test
+    image: maven:3-jdk-10
     commands:
       - echo start build images...
       - echo wo anzhuangle git
-      - bash ./build.sh
+      - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+      #- bash ./build.sh
     when:
       branch:
         - main
