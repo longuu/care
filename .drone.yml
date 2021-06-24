@@ -17,4 +17,4 @@ steps:
 #      - bash ./build.sh
     when:
       branch:
-        - master
+        - main
