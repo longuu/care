@@ -8,7 +8,6 @@ platform:
 
 steps:
   - name: test
-    image: maven:3-jdk-10
     commands:
       - echo start build images...
       - echo wo anzhuangle git
