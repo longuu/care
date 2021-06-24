@@ -10,7 +10,7 @@ steps:
   - name: greeting
     commands:
     - echo hello world
-    - ./java -version
+    - drone exec java -version
     when:
       branch:
         - main
