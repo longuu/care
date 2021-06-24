@@ -11,8 +11,8 @@ steps:
     commands:
       - echo start build images...
       - echo wo anzhuangle git
-      - git --version
-      - mvn -version
+      #- git --version
+      #- mvn -version
       #- bash ./build.sh
     when:
       branch:
