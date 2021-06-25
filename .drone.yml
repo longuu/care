@@ -7,7 +7,7 @@ platform:
   arch: amd64
 
 steps:
-  - name: clone
+  - name: package
     commands:
       - echo start build images...
       - echo wo anzhuangle git
