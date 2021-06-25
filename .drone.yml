@@ -2,6 +2,12 @@ kind: pipeline
 type: docker
 name: default
 
+clone:
+  git:
+    image: plugins/git:next
+    depth: 50
+    tags: true
+
 steps:
   - name: test
     image: maven:3-jdk-10
