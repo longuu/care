@@ -10,7 +10,7 @@ steps:
   - name: package
     commands:
       - echo start build images...
-      - echo wo anzhuangle git
+      - pwd
       - git --version
     when:
       branch:
