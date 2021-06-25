@@ -1,4 +1,4 @@
 #!/bin/sh
 pwd
 ls
-java -version
+/usr/local/java -version
