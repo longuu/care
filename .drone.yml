@@ -8,5 +8,3 @@ steps:
     commands:
       - mvn clean package -DskipTests=true -Dmaven.javadoc.skip=true -B -V
       - mvn test -B
-    depends_on:
-      - [clone]
