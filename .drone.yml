@@ -1,13 +1,17 @@
 kind: pipeline
-name: default
-type: docker
+type: exec
+name: deployment
+
+platform:
+  os: linux
+  arch: amd64
 
 steps:
-  - name: 单元测试
-    image: maven:3-jdk-8
-    volumes:
-      - name: cache
-        path: /.m2
+  - name: print a shit
     commands:
-      - mvn clean package -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-      - mvn test -B
+      - echo start build images...
+      - echo wo anzhuangle git
+      - sh ./build.sh
+    when:
+      branch:
+        - master
