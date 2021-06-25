@@ -1,6 +1,6 @@
 kind: pipeline # 定义对象类型，还有secret和signature两种类型
 type: docker # 定义流水线类型，还有kubernetes、exec、ssh等类型
-name: filesystem-drone # 定义流水线名称
+name: care-0.1 # 定义流水线名称
 
 steps: # 定义流水线执行步骤，这些步骤将顺序执行
   - name: package # 流水线名称
@@ -12,10 +12,10 @@ steps: # 定义流水线执行步骤，这些步骤将顺序执行
         path: /devop/build # 将应用打包好的Jar和执行脚本挂载出来
     commands: # 定义在Docker容器中执行的shell命令
       - mvn clean package # 应用打包命令
-      - cp target/care-0.1.jar /app/build/care-0.1.jar
-      - cp Dockerfile /app/build/Dockerfile
-      - cp run.sh /app/build/run.sh
-      - ./run.sh # 运行脚本打包应用镜像并运行
+#      - cp target/care-0.1.jar /app/build/care-0.1.jar
+#      - cp Dockerfile /app/build/Dockerfile
+#      - cp run.sh /app/build/run.sh
+#      - ./run.sh # 运行脚本打包应用镜像并运行
 
 #  - name: build-start
 #    image: appleboy/drone-ssh # SSH工具镜像
