@@ -6,6 +6,5 @@ steps: # 定义流水线执行步骤，这些步骤将顺序执行
   - name: package # 流水线名称
     commands: # 定义在Docker容器中执行的shell命令
       - echo hello world
-      - cd /
-      - pwd
+      - cat /etc/profile
       - ls
