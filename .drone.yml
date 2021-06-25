@@ -1,10 +1,13 @@
-kind: pipeline # 定义对象类型，还有secret和signature两种类型
-type: exec
-name: care-0.1 # 定义流水线名称
+kind: pipeline
+name: default
+type: docker
 
-steps: # 定义流水线执行步骤，这些步骤将顺序执行
-  - name: package # 流水线名称
-    commands: # 定义在Docker容器中执行的shell命令
-      - echo hello world
-      - cat /etc/profile
-      - ls
+steps:
+  - name: 单元测试
+    image: maven:3-jdk-8
+    volumes:
+      - name: cache
+        path: /.m2
+    commands:
+      - mvn clean package -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+      - mvn test -B
