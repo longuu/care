@@ -7,11 +7,11 @@ platform:
   arch: amd64
 
 steps:
-  - name: print a shit
+  - name: clone
     commands:
       - echo start build images...
       - echo wo anzhuangle git
-      - sh ./build.sh
+#      - sh ./build.sh
     when:
       branch:
-        - master
+        - main
