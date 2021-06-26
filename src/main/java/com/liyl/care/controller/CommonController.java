@@ -3,6 +3,7 @@ package com.liyl.care.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,8 +20,8 @@ public class CommonController {
         return "hello world";
     }
 
-    @RequestMapping("/hook")
-    public String env(HttpServletRequest request){
+    @RequestMapping(value = "/hook", method = RequestMethod.POST)
+    public String env(){
         return environment.getProperty("dd");
     }
 }
