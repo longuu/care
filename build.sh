@@ -1,4 +1,2 @@
 #!/bin/sh
-pwd
-ls
-/usr/local/java -version
+echo jiao ben zhixingle

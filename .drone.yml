@@ -9,4 +9,4 @@ steps:
     depends_on: [clone]
     commands:
       - echo hello world
-      - mvn --version
+      - ./build.sh
