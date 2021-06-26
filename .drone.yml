@@ -7,5 +7,6 @@ clone:
 steps:
   - name: test
     image: maven:3-jdk-10
+    depends_on: [clone]
     commands:
       - mvn clean package -B -V
