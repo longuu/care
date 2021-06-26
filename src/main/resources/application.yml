@@ -3,4 +3,6 @@ spring:
     name: care
   profiles:
     active: dev
-
+  mvc:
+    servlet:
+      load-on-startup: 100
