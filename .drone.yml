@@ -9,7 +9,6 @@ steps:
     depends_on: [clone]
     commands:
       - echo hello world
-      - mvn --version
 when:
   branch:
     - main
