@@ -9,4 +9,4 @@ steps:
     image: maven:3-jdk-10
     depends_on: [clone]
     commands:
-      - mvn clean package -B -V
+      - echo hello world
