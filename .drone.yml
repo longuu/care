@@ -9,4 +9,7 @@ steps:
     depends_on: [clone]
     commands:
       - echo hello world
-      - ./build.sh
+      - sh ./build.sh
+when:
+  branch:
+    - main
